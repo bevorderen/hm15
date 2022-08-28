@@ -213,7 +213,7 @@ func setToMemc(wg *sync.WaitGroup, channelAppDevice chan deviceApps, config Conf
 		}
 
 		if config.dryRun {
-			//log.Printf("%v -> %v\n", item.Key, app)
+			log.Printf("%v -> %v\n", item.Key, app)
 			continue
 		}
 		if err := memcSetWithRetry(&config, &item, memcClient); err != nil {
